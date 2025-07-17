@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'django.contrib.admin',
     'hexlet_django_blog',
+    'hexlet_django_blog.article',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
