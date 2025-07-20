@@ -1,6 +1,8 @@
 from django.urls import path
-from .views import ArticleIndexView
+from hexlet_django_blog.article.views import IndexView, ArticleView, ArticleCommentsView
 
 urlpatterns = [
-    path('<str:tags>/<int:article_id>', ArticleIndexView.as_view(), name='article'),
+    path("", IndexView.as_view()),
+    path("<int:id>/", ArticleView.as_view(), name='show_article'),
+    path('<int:article_id>/comments/<int:id>/', ArticleCommentsView.as_view()),
 ]
